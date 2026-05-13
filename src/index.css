@@ -9,7 +9,7 @@
 }
 @font-face {
   font-family: "Cintarini";
-  src: url("./fonts/Cintarini.ttf") format("truetype");
+  src: url("/fonts/Cintarini.ttf") format("truetype");
 }
 #root{
   overflow: hidden;
