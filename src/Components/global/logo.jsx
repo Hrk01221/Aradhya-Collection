@@ -6,7 +6,7 @@ const Logo = () => {
       <div className="w-10 h-10">
         <img
           className="h-full w-full object-contain"
-          src="/src/assets/tplogo.png"
+          src="./src/assets/tplogo.png"
           alt="logo"
         />
       </div>
