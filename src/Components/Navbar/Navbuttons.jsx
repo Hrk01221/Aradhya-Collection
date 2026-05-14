@@ -10,6 +10,7 @@ import {
   Users,
 } from "lucide-react";
 import NavIcons from "./NavIcons";
+
 const Navbuttons = () => {
   return (
     <div className="md:flex gap-6 xl:gap-8 absolute sm:relative right-2">
@@ -29,7 +30,7 @@ const Navbuttons = () => {
           size={22}
           strokeWidth={1.4}
         />
-        <div className="absolute top-8 right-0 invisible opacity-0 group-hover:opacity-100 group-hover:visible transition-all duration-300 bg-bg border border-black shadow-lg rounded mt-2 min-w-38 z-50">
+        <div className="absolute top-9 right-0 invisible opacity-0 group-hover:opacity-100 group-hover:visible transition-all duration-300 bg-bg border border-black shadow-lg rounded mt-2 min-w-38 z-50">
           <ul className="py-2">
             <li className="px-4 py-2 cursor-pointer flex gap-4 border-b border-gray-400 transition-all duration-300 ease-in-out hover:text-primary">
               <Contact size={20} strokeWidth={1.4} />

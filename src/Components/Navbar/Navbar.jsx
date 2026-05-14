@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import Logo from "../global/logo";
-import { ChevronDown, Menu, ShoppingCart } from "lucide-react";
+import { ChevronDown, Menu, ShoppingCart, X } from "lucide-react";
 import Popupnav from "./Popupnav";
 import Navbuttons from "./Navbuttons";
 import Searchbar from "../global/searchbar";
+import { AppContext } from "/src/context/AppContext";
+
 const Navbar = () => {
   const static_types_items = [
     "Food",
@@ -12,6 +14,7 @@ const Navbar = () => {
     "Chains",
     "Statues",
   ];
+  const {menuOpen , toggleMenu} = useContext(AppContext);
   return (
     <div className="w-screen box-border shadow-[1.95px_1.95px_2.6px_rgba(0,0,0,0.15)] flex flex-col gap-4 pb-1.5 items-center bg-bg fixed">
       <Popupnav />
@@ -19,11 +22,22 @@ const Navbar = () => {
         <div className="relative w-full pr-2 md:w-[70%] h-full flex items-center justify-center sm:justify-between">
           <Logo />
           <Searchbar />
-          <Menu
+
+          {/* Mobile update */}
+          {!menuOpen ? (<Menu
+            onClick={toggleMenu}
+            className="absolute sm:hidden left-3"
+            size={22}
+            strokeWidth={1.4}
+          />):(
+            <X
+            onClick={toggleMenu}
             className="absolute sm:hidden left-3"
             size={22}
             strokeWidth={1.4}
           />
+          )}
+
           <div className="absolute flex flex-col justify-center items-center sm:hidden right-3">
             <ShoppingCart
             className="scale-x-[-1]"
@@ -36,19 +50,20 @@ const Navbar = () => {
               10
             </div>
           </div>
+
         </div>
         <Navbuttons />
       </div>
-      {/* <div className="w-[80%] flex items-center gap-8">
+      <div className="hidden w-full px-2 lg:w-[80%] sm:flex items-center gap-4 md:gap-8">
           <div className="cursor-pointer hover:opacity-100 opacity-85 flex gap-1 border border-primary rounded-md w-34 justify-center items-center p-1 bg-primary text-bg whitespace-nowrap">
             <Menu size={16} strokeWidth={2}/>
             <div className="text-[14px]">All Categories</div>
             <ChevronDown size={16} strokeWidth={2}/>
           </div>
-          {static_types_items.map((val)=>{
-            return <div className="text-gray-600 px-4 py-1 border border-bg rounded-xl cursor-pointer hover:border hover:bg-[#FFE6EA] transition-all duration-200 ease-linear">{val}</div>
+          {static_types_items.map((val,idx)=>{
+            return <div key = {idx} className="text-gray-600 px-4 py-1 border border-bg rounded-xl cursor-pointer hover:border hover:bg-[#FFE6EA] transition-all duration-200 ease-linear">{val}</div>
           })}
-      </div> */}
+      </div>
     </div>
   );
 };

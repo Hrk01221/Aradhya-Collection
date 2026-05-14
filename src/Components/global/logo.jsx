@@ -2,7 +2,7 @@ import React from "react";
 
 const Logo = () => {
   return (
-    <div className="flex gap-2 items-center px-2 lg:px-2">
+    <div className="flex gap-2 items-center px-2">
       <div className="w-10 h-10">
         <img
           className="h-full w-full object-contain"

@@ -1,12 +1,28 @@
-import React from 'react'
-import Navbar from './Components/Navbar/Navbar'
+import React, { useContext, useEffect } from "react";
+import Navbar from "./Components/Navbar/Navbar";
+import Sidebar from "./Components/Navbar/Sidebar";
+import { AppContext } from "/src/context/AppContext";
 
 const App = () => {
-  return (
-    <div className='w-screen h-[400vh] bg-bg flex flex-col items-center'>
-      <Navbar/>
-    </div>
-  )
-}
+  const { menuOpen, toggleMenu } = useContext(AppContext);
 
-export default App
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [menuOpen]);
+
+  return (
+    <div className="w-screen h-[900vh] bg-bg flex flex-col">
+      <Navbar />
+      <Sidebar/>
+    </div>
+  );
+};
+
+export default App;
