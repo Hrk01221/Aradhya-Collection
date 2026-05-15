@@ -54,7 +54,7 @@ const Navbar = () => {
         <Navbuttons />
       </div>
       <div className="w-full relative px-2">
-        <div className="sm:hidden group w-full h-8 box-border relative flex justify-center items-center">
+        <div className="sm:hidden group w-full h-8 box-border relative flex justify-center items-center mb-2">
           <input
             className="peer w-full h-full box-border pl-8 border border-gray-400 rounded-[10px] transition-all duration-200 ease-in-out text-gray-500 focus:outline-primary"
             type="search"

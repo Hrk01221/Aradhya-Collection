@@ -32,10 +32,9 @@ const Featured = () => {
   }, [menuOpen, imglinks.length]);
 
   return (
-    <div className="top-40 sm:top-45 relative w-full h-175 flex justify-center">
-      <div className="w-[90%] h-[35%] sm:w-[97%] lg:w-[80%] sm:h-[90%] flex items-center gap-2">
-
-        <div className=" cursor-pointer w-full lg:w-[60%] h-full relative rounded-2xl overflow-hidden flex items-center justify-center">
+    <div className="relative w-full h-60 sm:h-100 flex justify-center">
+      <div className="w-[98%] h-full sm:h-full sm:w-[97%] lg:w-[80%] flex items-center gap-2">
+        <div className="relative cursor-pointer w-full h-full xl:w-[60%] rounded-2xl overflow-hidden flex items-center justify-center">
           {imglinks.map((src, idx) => (
             <img
               key={idx}
@@ -65,13 +64,8 @@ const Featured = () => {
           </div>
         </div>
 
-        <div className="hidden lg:flex flex-col w-full lg:w-[40%] h-full gap-2">
-          <div className="cursor-pointer w-full h-1/2">
-            <img
-              className="w-full h-full object-center rounded-2xl"
-              src="https://i.pinimg.com/1200x/6f/64/b9/6f64b90146395ccec2700f03bc168d97.jpg"
-              alt=""
-            />
+        <div className="hidden xl:flex flex-col w-full lg:w-[40%] h-full gap-2">
+          <div className="cursor-pointer w-full h-full">
             <img
               className="w-full h-full object-center rounded-2xl"
               src="https://i.pinimg.com/1200x/2a/4f/d4/2a4fd4bb660e9e77761cf90123f2692e.jpg"
