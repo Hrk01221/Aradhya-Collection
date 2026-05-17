@@ -14,9 +14,9 @@ const Navbar = () => {
     "Chains",
     "Statues",
   ];
-  const { menuOpen, toggleMenu } = useContext(AppContext);
+  const { menuOpen, toggleMenu , toggleCart} = useContext(AppContext);
   return (
-    <div className="z-999 w-screen box-border shadow-[1.95px_1.95px_2.6px_rgba(0,0,0,0.15)] flex flex-col gap-4 pb-1.5 items-center bg-bg fixed">
+    <div className="z-50 w-screen box-border shadow-[1.95px_1.95px_2.6px_rgba(0,0,0,0.15)] flex flex-col gap-4 pb-1.5 items-center bg-bg fixed">
       <Popupnav />
       <div className="w-full h-10 flex items-center gap-40 relative lg:w-[80%]">
         <div className="relative w-full pr-2 md:w-[70%] h-full flex items-center justify-center sm:justify-between">
@@ -39,7 +39,7 @@ const Navbar = () => {
             />
           )}
 
-          <div className="absolute flex flex-col justify-center items-center sm:hidden right-3">
+          <div onClick={toggleCart} className="absolute flex flex-col justify-center items-center sm:hidden right-3">
             <ShoppingCart
               className="scale-x-[-1]"
               size={22}

@@ -17,19 +17,13 @@ const Featured = () => {
   };
 
   useEffect(() => {
-    if (menuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
     const interval = setInterval(() => {
       setfeatureIdx((prev) => (prev + 1) % imglinks.length);
     }, 10000);
     return () => {
       clearInterval(interval);
-      document.body.style.overflow = "auto";
     };
-  }, [menuOpen, imglinks.length]);
+  }, [imglinks.length]);
 
   return (
     <div className="relative w-full h-60 sm:h-100 flex justify-center">
@@ -68,7 +62,7 @@ const Featured = () => {
           <div className="cursor-pointer w-full h-full">
             <img
               className="w-full h-full object-center rounded-2xl"
-              src="https://i.pinimg.com/1200x/2a/4f/d4/2a4fd4bb660e9e77761cf90123f2692e.jpg"
+              src="https://i1-e.pinimg.com/1200x/7d/64/b6/7d64b6e01c7e80aaf1b6e12b43869e05.jpg"
               alt=""
             />
           </div>

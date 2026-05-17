@@ -1,12 +1,14 @@
-import React from 'react'
-import Hero from './Pages/Hero/Hero'
+import React from "react";
+import Hero from "./Pages/Hero/Hero";
+import Cart from "./Components/global/Cart";
 
 const App = () => {
   return (
-    <div>
-      <Hero/>
+    <div className="relative w-screen h-screen">
+        <Hero />
+        <Cart/>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

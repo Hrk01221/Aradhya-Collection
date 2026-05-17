@@ -1,7 +1,6 @@
 import React from "react";
 
 const BenifitIcons = ({keyP, Icon, tittle, desc }) => {
-  console.log(keyP);
   
   return (
     <div className={`border-r ${keyP-1<2 ? "border-b lg:border-b-0":""} ${keyP%2==0 ? "border-r-0":""} ${keyP==2 ? "lg:border-r" : ""} border-slate-400 flex justify-center items-center p-4 gap-4

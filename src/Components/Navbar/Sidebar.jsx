@@ -6,7 +6,7 @@ const Sidebar = () => {
   const { menuOpen, toggleMenu } = useContext(AppContext);
   return (
     <div
-      className={`z-999 fixed top-36 left-0 w-[80%] h-[calc(100vh-5.5rem)] bg-bg shadow-2xl
+      className={`z-50 fixed top-36 left-0 w-[80%] h-[calc(100vh-5.5rem)] bg-bg shadow-2xl
         transform transition-transform duration-300 ease-in-out
         ${menuOpen ? "translate-x-0" : "-translate-x-full"}
         flex flex-col items-center py-4 px-2 gap-5 overflow-y-auto`}

@@ -5,7 +5,8 @@ export default {
       colors: {
         primary: "#FA2170",
         secondary: "#231e1f",
-        bg: "#FFE9F5",
+        bg: "#fff",
+        fadebg:"#FFE9F5"
       },
       fontFamily: {
         thurkle: ["Thurkle", "sans-serif"],
